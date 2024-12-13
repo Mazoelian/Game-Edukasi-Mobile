@@ -159,19 +159,46 @@ class QuizActivity : AppCompatActivity() {
             else -> ""
         }
 
-        if (selectedAnswer == correctAnswer) {
-            correctCount++
-        } else {
-            wrongCount++
+        // Tentukan tombol yang dipilih
+        val selectedButton = when (answer) {
+            "A" -> btnOptionA
+            "B" -> btnOptionB
+            "C" -> btnOptionC
+            "D" -> btnOptionD
+            else -> null
         }
 
-        currentQuestionIndex++
-        if (currentQuestionIndex < questionList.size) {
-            setupQuestion()
+        // Ubah warna tombol berdasarkan jawaban
+        if (selectedAnswer == correctAnswer) {
+            correctCount++
+            selectedButton?.setBackgroundColor(getColor(R.color.button_correct))
+            Toast.makeText(this, "Benar!", Toast.LENGTH_SHORT).show()
         } else {
-            goToSkorActivity()
+            wrongCount++
+            selectedButton?.setBackgroundColor(getColor(R.color.button_wrong))
+            Toast.makeText(this, "Salah!", Toast.LENGTH_SHORT).show()
         }
+
+        // Tunda sebelum melanjutkan ke soal berikutnya
+        selectedButton?.postDelayed({
+            resetButtonColors()
+            currentQuestionIndex++
+            if (currentQuestionIndex < questionList.size) {
+                setupQuestion()
+            } else {
+                goToSkorActivity()
+            }
+        }, 1000) // Tunda 1 detik
     }
+
+    private fun resetButtonColors() {
+        btnOptionA.setBackgroundColor(getColor(R.color.button_default))
+        btnOptionB.setBackgroundColor(getColor(R.color.button_default))
+        btnOptionC.setBackgroundColor(getColor(R.color.button_default))
+        btnOptionD.setBackgroundColor(getColor(R.color.button_default))
+    }
+
+
 
     private fun goToSkorActivity() {
         val intent = Intent(this, SkorActivity::class.java)
