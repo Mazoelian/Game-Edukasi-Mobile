@@ -10,6 +10,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
         // Referensi tombol
         val startGameButton = findViewById<Button>(R.id.btn_start_game)
 

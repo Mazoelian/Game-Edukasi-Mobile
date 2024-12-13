@@ -1,11 +1,91 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/ic_launcher_game_background"
-    tools:context=".GameMainActivity">
+    android:orientation="vertical"
+    android:id="@+id/main"
+    android:gravity="center"
+    android:padding="16dp"
+    android:background="@drawable/bg_main"> <!-- Background biru muda -->
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!-- Judul Game -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Game Edukatif"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-condensed"
+        android:textColor="#1A237E"
+        android:gravity="center"
+     android:layout_marginBottom="40dp" />
+
+    <!-- Subjudul -->
+    <TextView
+        android:id="@+id/tvSubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pilih Pelajaran"
+        android:textSize="20sp"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="#0D47A1"
+        android:gravity="center"
+        android:layout_marginBottom="24dp" />
+
+    <!-- Tombol IPA -->
+    <LinearLayout
+        android:id="@+id/btnIPA"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_margin="8dp"
+        android:padding="16dp"
+        android:elevation="12dp"
+        android:background="@drawable/button_3d_green">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/bg_book"
+            android:contentDescription="IPA Icon"
+            android:layout_marginEnd="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ilmu Pengetahuan Alam"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- Tombol IPS -->
+    <LinearLayout
+        android:id="@+id/btnIPS"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_margin="8dp"
+        android:padding="16dp"
+        android:elevation="12dp"
+        android:background="@drawable/button_3d_orange"> <!-- Background oranye -->
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/globe"
+            android:contentDescription="IPS Icon"
+            android:layout_marginEnd="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ilmu Pengetahuan Sosial"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape>
+            <solid android:color="#388E3C" /> <!-- Warna hijau tua -->
+            <corners android:radius="16dp" />
+        </shape>
+    </item>
+    <item android:top="6dp" android:left="6dp">
+        <shape>
+            <gradient
+                android:startColor="#4CAF50"
+            android:endColor="#388E3C"
+            android:angle="45" />
+            <corners android:radius="16dp" />
+        </shape>
+    </item>
+</layer-list>

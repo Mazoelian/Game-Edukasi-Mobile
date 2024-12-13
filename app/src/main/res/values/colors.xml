@@ -2,7 +2,7 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="button_default">#6200EE</color> <!-- Warna default tombol -->
+    <color name="button_default">#1F509A</color> <!-- Warna default tombol -->
     <color name="button_correct">#4CAF50</color> <!-- Hijau -->
     <color name="button_wrong">#F44336</color> <!-- Merah -->
 
