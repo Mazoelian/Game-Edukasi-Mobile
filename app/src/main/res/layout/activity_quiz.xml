@@ -21,21 +21,37 @@
         <!-- Jumlah Soal -->
         <TextView
             android:id="@+id/tv_question_count"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:text="Soal: 1/5"
-            android:textSize="18sp"
             android:textColor="@android:color/black"
-            android:layout_marginEnd="16dp" />
+            android:textSize="18sp"
+            android:layout_marginStart="10dp"
+            android:gravity="start" />
+
+        <TextView
+            android:id="@+id/title_quiz"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="IPA"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center" />
 
         <!-- Timer -->
         <TextView
             android:id="@+id/tv_timer"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:text="05:00"
             android:textSize="18sp"
-            android:textColor="@android:color/black" />
+            android:layout_marginEnd="10dp"
+            android:textColor="@android:color/black"
+            android:gravity="end" />
     </LinearLayout>
 
     <!-- CardView untuk Soal -->
