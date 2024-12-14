@@ -17,7 +17,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="168dp"
         android:fontFamily="sans-serif-condensed"
-        android:text="Game IPS"
+        android:text="Pelajaran IPS"
         android:textColor="#4E342E"
         android:textSize="36sp"
         android:textStyle="bold"

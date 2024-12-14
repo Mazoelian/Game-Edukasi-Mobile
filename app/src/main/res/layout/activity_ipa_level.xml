@@ -14,7 +14,7 @@
         android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Game IPA"
+        android:text="Pelajaran IPA"
         android:textSize="36sp"
         android:textStyle="bold"
         android:fontFamily="sans-serif-condensed"

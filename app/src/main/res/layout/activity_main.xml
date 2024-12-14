@@ -5,32 +5,39 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/sekolah"
+    android:background="@drawable/lobi"
     tools:context=".MainActivity">
 
-    <!-- Tulisan "Selamat Datang" di bagian atas -->
-    <TextView
-        android:id="@+id/tv_welcome"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Selamat Datang"
-        android:textSize="24sp"
-        android:textColor="@android:color/white"
-        android:fontFamily="sans-serif-medium"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="32dp"/>
+    <!-- Tulisan "Selamat Datang di CEMAT" di bagian atas -->
+
 
     <!-- Gambar di tengah -->
 
     <!-- Tombol di bagian bawah -->
 
+    <TextView
+        android:id="@+id/tv_welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:fontFamily="sans-serif-black"
+        android:shadowColor="#000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="3"
+        android:text="Selamat Datang di CEMAT"
+        android:textColor="#FF9800"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <ImageView
         android:id="@+id/center_image"
         android:layout_width="308dp"
         android:layout_height="442dp"
-        android:layout_marginTop="244dp"
+        android:layout_marginTop="376dp"
         android:contentDescription="Center Image"
         android:src="@drawable/sekolah2"
         app:layout_constraintEnd_toEndOf="parent"
@@ -40,15 +47,16 @@
 
     <Button
         android:id="@+id/btn_start_game"
-        android:layout_width="320dp"
+        android:layout_width="280dp"
         android:layout_height="50dp"
-        android:backgroundTint="@android:color/holo_green_light"
+        android:layout_marginBottom="136dp"
+        android:backgroundTint="#4CAF50"
         android:text="MULAI BERMAIN"
         android:textColor="@android:color/white"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginBottom="32dp"/>
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

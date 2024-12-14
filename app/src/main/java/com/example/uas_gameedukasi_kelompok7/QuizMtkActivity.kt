@@ -195,10 +195,10 @@ class QuizMtkActivity : AppCompatActivity() {
     }
 
     private fun resetButtonColors() {
-        btnOptionA.setBackgroundColor(ContextCompat.getColor(this, R.color.button_default))
-        btnOptionB.setBackgroundColor(ContextCompat.getColor(this, R.color.button_default))
-        btnOptionC.setBackgroundColor(ContextCompat.getColor(this, R.color.button_default))
-        btnOptionD.setBackgroundColor(ContextCompat.getColor(this, R.color.button_default))
+        btnOptionA.setBackgroundColor(ContextCompat.getColor(this, R.color.btn_mtk))
+        btnOptionB.setBackgroundColor(ContextCompat.getColor(this, R.color.btn_mtk))
+        btnOptionC.setBackgroundColor(ContextCompat.getColor(this, R.color.btn_mtk))
+        btnOptionD.setBackgroundColor(ContextCompat.getColor(this, R.color.btn_mtk))
     }
 
     private fun goToScoreActivity() {

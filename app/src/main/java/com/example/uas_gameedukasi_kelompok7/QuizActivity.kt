@@ -192,10 +192,10 @@ class QuizActivity : AppCompatActivity() {
     }
 
     private fun resetButtonColors() {
-        btnOptionA.setBackgroundColor(getColor(R.color.button_default))
-        btnOptionB.setBackgroundColor(getColor(R.color.button_default))
-        btnOptionC.setBackgroundColor(getColor(R.color.button_default))
-        btnOptionD.setBackgroundColor(getColor(R.color.button_default))
+        btnOptionA.setBackgroundColor(getColor(R.color.btn_ipa))
+        btnOptionB.setBackgroundColor(getColor(R.color.btn_ipa))
+        btnOptionC.setBackgroundColor(getColor(R.color.btn_ipa))
+        btnOptionD.setBackgroundColor(getColor(R.color.btn_ipa))
     }
 
 
