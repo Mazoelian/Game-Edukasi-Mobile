@@ -1,25 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/lobi"
-    tools:context=".MainActivity">
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/lobi">
 
-    <!-- Tulisan "Selamat Datang di CEMAT" di bagian atas -->
-
-
-    <!-- Gambar di tengah -->
-
-    <!-- Tombol di bagian bawah -->
-
+    <!-- Tulisan "Selamat Datang di CEMAT" -->
     <TextView
         android:id="@+id/tv_welcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
         android:fontFamily="sans-serif-black"
         android:shadowColor="#000000"
         android:shadowDx="2"
@@ -27,36 +19,33 @@
         android:shadowRadius="3"
         android:text="Selamat Datang di CEMAT"
         android:textColor="#FF9800"
-        android:textSize="26sp"
+        android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:padding="8dp"
+        android:background="@drawable/rounded_background"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="24dp" />
 
+
+
+    <!-- Gambar di tengah -->
+
+    <!-- Tombol di bawah -->
     <ImageView
         android:id="@+id/center_image"
-        android:layout_width="308dp"
-        android:layout_height="442dp"
-        android:layout_marginTop="376dp"
-        android:contentDescription="Center Image"
-        android:src="@drawable/sekolah2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_welcome" />
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_marginBottom="8dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/sekolah2" />
 
     <Button
         android:id="@+id/btn_start_game"
-        android:layout_width="280dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="136dp"
-        android:backgroundTint="#4CAF50"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="MULAI BERMAIN"
         android:textColor="@android:color/white"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:backgroundTint="#4CAF50"
+        android:textSize="18sp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
