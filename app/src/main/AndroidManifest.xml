@@ -25,6 +25,9 @@
             android:name=".IpaLevelActivity"
             android:exported="false" />
         <activity
+            android:name=".IpsLevelActivity"
+            android:exported="false" />
+        <activity
             android:name=".GameMainActivity"
             android:exported="false" /> <!-- Pindahkan <intent-filter> ke dalam <activity> SplashActivity -->
         <activity
