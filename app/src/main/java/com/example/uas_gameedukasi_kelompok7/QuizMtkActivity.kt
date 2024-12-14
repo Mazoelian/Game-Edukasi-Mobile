@@ -6,16 +6,17 @@ import android.os.CountDownTimer
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
+import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 
-data class QuestionIps(
+data class QuestionMtk(
     val text: String,
     val options: List<String>,
     val correctAnswer: String
 )
 
-class QuizIpsActivity : AppCompatActivity() {
+class QuizMtkActivity : AppCompatActivity() {
 
     private lateinit var tvQuestion: TextView
     private lateinit var tvQuestionCount: TextView
@@ -24,7 +25,7 @@ class QuizIpsActivity : AppCompatActivity() {
     private lateinit var btnOptionB: Button
     private lateinit var btnOptionC: Button
     private lateinit var btnOptionD: Button
-    private lateinit var questionList: List<QuestionIps>
+    private lateinit var questionList: List<QuestionMtk>
 
     private var currentQuestionIndex = 0
     private var correctCount = 0
@@ -34,7 +35,8 @@ class QuizIpsActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_quiz_ips)
+//        enableEdgeToEdge()
+        setContentView(R.layout.activity_quiz_mtk)
 
         // Initialize views
         tvQuestion = findViewById(R.id.tv_question)
@@ -61,51 +63,66 @@ class QuizIpsActivity : AppCompatActivity() {
     private fun setupQuestions(level: String?) {
         questionList = when (level) {
             "mudah" -> {
-                timerDuration = 2 * 60 * 1000 // 2 minutes for easy level
+                timerDuration = 2 * 60 * 1000 // 2 menit untuk level mudah
                 generateLevel1Questions()
             }
             "normal" -> {
-                timerDuration = 1 * 60 * 1000 // 1 minute for normal level
+                timerDuration = 1 * 60 * 1000 // 1 menit untuk level normal
                 generateLevel2Questions()
             }
             "sulit" -> {
-                timerDuration = 45 * 1000 // 45 seconds for hard level
+                timerDuration = 45 * 1000 // 45 detik untuk level sulit
                 generateLevel3Questions()
             }
             else -> {
-                timerDuration = 2 * 60 * 1000 // Default to easy level
+                timerDuration = 2 * 60 * 1000 // Default ke level mudah jika level tidak ditemukan
                 generateLevel1Questions()
             }
         }
     }
 
-    private fun generateLevel1Questions(): List<QuestionIps> {
+    private fun generateLevel1Questions(): List<QuestionMtk> {
         return listOf(
-            QuestionIps("Apa ibu kota Indonesia?", listOf("Jakarta", "Surabaya", "Medan", "Bandung"), "Jakarta"),
-            QuestionIps("Pulau terbesar di Indonesia adalah?", listOf("Kalimantan", "Sumatra", "Papua", "Jawa"), "Kalimantan"),
-            QuestionIps("Dimanakah letak Candi Borobudur?", listOf("Jawa Tengah", "Bali", "Jawa Timur", "Sumatra Utara"), "Jawa Tengah"),
-            QuestionIps("Apa nama kerajaan Islam pertama di Indonesia?", listOf("Samudera Pasai", "Majapahit", "Sriwijaya", "Mataram"), "Samudera Pasai"),
-            QuestionIps("Siapa presiden pertama Indonesia?", listOf("Soekarno", "Hatta", "Soeharto", "Habibie"), "Soekarno")
+            QuestionMtk("5 + 3 = ?", listOf("6", "7", "8", "9"), "8"),
+            QuestionMtk("2 + 4 = ?", listOf("5", "6", "7", "8"), "6"),
+            QuestionMtk("9 - 4 = ?", listOf("3", "4", "5", "6"), "5"),
+            QuestionMtk("6 + 2 = ?", listOf("7", "8", "9", "10"), "8"),
+            QuestionMtk("3 + 3 = ?", listOf("5", "6", "7", "8"), "6"),
+            QuestionMtk("7 - 2 = ?", listOf("4", "5", "6", "7"), "5"),
+            QuestionMtk("8 - 4 = ?", listOf("3", "4", "5", "6"), "4"),
+            QuestionMtk("3 x 2 = ?", listOf("5", "6", "7", "8"), "6"),
+            QuestionMtk("4 x 2 = ?", listOf("7", "8", "9", "10"), "8"),
+            QuestionMtk("5 x 3 = ?", listOf("12", "13", "14", "15"), "15")
         )
     }
 
-    private fun generateLevel2Questions(): List<QuestionIps> {
+    private fun generateLevel2Questions(): List<QuestionMtk> {
         return listOf(
-            QuestionIps("Apa nama galaksi tempat kita berada?", listOf("Bimasakti", "Andromeda", "Orion", "Alpha Centauri"), "Bimasakti"),
-            QuestionIps("Dimanakah letak Danau Toba?", listOf("Sumatra Utara", "Sumatra Barat", "Jawa Timur", "Bali"), "Sumatra Utara"),
-            QuestionIps("Apa warna bendera Indonesia?", listOf("Merah Putih", "Merah Biru", "Putih Hijau", "Kuning Merah"), "Merah Putih"),
-            QuestionIps("Apa nama gunung tertinggi di Indonesia?", listOf("Puncak Jaya", "Semeru", "Merapi", "Rinjani"), "Puncak Jaya"),
-            QuestionIps("Apa nama sungai terpanjang di Indonesia?", listOf("Kapuas", "Musi", "Mahakam", "Barito"), "Kapuas")
+            QuestionMtk("12 + 8 = ?", listOf("18", "19", "20", "21"), "20"),
+            QuestionMtk("15 - 7 = ?", listOf("7", "8", "9", "10"), "8"),
+            QuestionMtk("5 x 6 = ?", listOf("25", "30", "35", "40"), "30"),
+            QuestionMtk("18 ÷ 2 = ?", listOf("6", "7", "8", "9"), "9"),
+            QuestionMtk("20 - 4 = ?", listOf("14", "15", "16", "17"), "16"),
+            QuestionMtk("10 + 15 = ?", listOf("24", "25", "26", "27"), "25"),
+            QuestionMtk("7 x 4 = ?", listOf("28", "29", "30", "31"), "28"),
+            QuestionMtk("16 ÷ 4 = ?", listOf("3", "4", "5", "6"), "4"),
+            QuestionMtk("9 + 12 = ?", listOf("20", "21", "22", "23"), "21"),
+            QuestionMtk("14 x 2 = ?", listOf("27", "28", "29", "30"), "28")
         )
     }
 
-    private fun generateLevel3Questions(): List<QuestionIps> {
+    private fun generateLevel3Questions(): List<QuestionMtk> {
         return listOf(
-            QuestionIps("Siapa nama presiden Indonesia yang ke-7?", listOf("Joko Widodo", "Susilo Bambang Yudhoyono", "Megawati", "Hatta"), "Joko Widodo"),
-            QuestionIps("Apa ibu kota Provinsi Bali?", listOf("Denpasar", "Surabaya", "Medan", "Bandung"), "Denpasar"),
-            QuestionIps("Apa nama ibu kota Jawa Barat?", listOf("Bandung", "Surabaya", "Semarang", "Yogyakarta"), "Bandung"),
-            QuestionIps("Dimanakah letak Pulau Komodo?", listOf("Nusa Tenggara Timur", "Bali", "Papua", "Sumatra"), "Nusa Tenggara Timur"),
-            QuestionIps("Apa nama kota terbesar di Jawa Timur?", listOf("Surabaya", "Malang", "Sidoarjo", "Banyuwangi"), "Surabaya")
+            QuestionMtk("24 ÷ 6 = ?", listOf("3", "4", "5", "6"), "4"),
+            QuestionMtk("18 + 13 = ?", listOf("30", "31", "32", "33"), "31"),
+            QuestionMtk("15 x 3 = ?", listOf("44", "45", "46", "47"), "45"),
+            QuestionMtk("27 ÷ 3 = ?", listOf("8", "9", "10", "11"), "9"),
+            QuestionMtk("11 + 15 = ?", listOf("25", "26", "27", "28"), "26"),
+            QuestionMtk("36 ÷ 9 = ?", listOf("3", "4", "5", "6"), "4"),
+            QuestionMtk("14 x 5 = ?", listOf("65", "70", "75", "80"), "70"),
+            QuestionMtk("20 + 28 = ?", listOf("48", "49", "50", "51"), "48"),
+            QuestionMtk("32 ÷ 4 = ?", listOf("7", "8", "9", "10"), "8"),
+            QuestionMtk("16 x 3 = ?", listOf("45", "46", "47", "48"), "48")
         )
     }
 
@@ -118,7 +135,7 @@ class QuizIpsActivity : AppCompatActivity() {
             }
 
             override fun onFinish() {
-                Toast.makeText(this@QuizIpsActivity, "Waktu Habis!", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@QuizMtkActivity, "Waktu Habis!", Toast.LENGTH_SHORT).show()
                 goToScoreActivity()
             }
         }
@@ -185,7 +202,7 @@ class QuizIpsActivity : AppCompatActivity() {
     }
 
     private fun goToScoreActivity() {
-        val intent = Intent(this, SkorIpsActivity::class.java)
+        val intent = Intent(this, SkorMtkActivity::class.java)
         intent.putExtra("CORRECT", correctCount)
         intent.putExtra("WRONG", wrongCount)
         startActivity(intent)
