@@ -25,6 +25,9 @@
             android:name=".SkorActivity"
             android:exported="false" />
         <activity
+            android:name=".SkorIpsActivity"
+            android:exported="false" />
+        <activity
             android:name=".QuizActivity"
             android:exported="false" />
         <activity

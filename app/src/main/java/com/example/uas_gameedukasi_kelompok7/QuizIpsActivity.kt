@@ -85,7 +85,12 @@ class QuizIpsActivity : AppCompatActivity() {
             QuestionIps("Pulau terbesar di Indonesia adalah?", listOf("Kalimantan", "Sumatra", "Papua", "Jawa"), "Kalimantan"),
             QuestionIps("Dimanakah letak Candi Borobudur?", listOf("Jawa Tengah", "Bali", "Jawa Timur", "Sumatra Utara"), "Jawa Tengah"),
             QuestionIps("Apa nama kerajaan Islam pertama di Indonesia?", listOf("Samudera Pasai", "Majapahit", "Sriwijaya", "Mataram"), "Samudera Pasai"),
-            QuestionIps("Siapa presiden pertama Indonesia?", listOf("Soekarno", "Hatta", "Soeharto", "Habibie"), "Soekarno")
+            QuestionIps("Siapa presiden pertama Indonesia?", listOf("Soekarno", "Hatta", "Soeharto", "Habibie"), "Soekarno"),
+            QuestionIps("Dimanakah letak Taman Nasional Komodo?", listOf("NTT", "Bali", "Papua", "Sumatra"), "NTT"),
+            QuestionIps("Apa warna bendera Indonesia?", listOf("Merah Putih", "Merah Biru", "Putih Hijau", "Kuning Merah"), "Merah Putih"),
+            QuestionIps("Apa nama gunung tertinggi di Indonesia?", listOf("Puncak Jaya", "Semeru", "Merapi", "Rinjani"), "Puncak Jaya"),
+            QuestionIps("Apa nama sungai terpanjang di Indonesia?", listOf("Kapuas", "Musi", "Mahakam", "Barito"), "Kapuas"),
+            QuestionIps("Siapa yang menemukan teori gravitasi?", listOf("Newton", "Einstein", "Galileo", "Aristoteles"), "Newton")
         )
     }
 
@@ -93,9 +98,14 @@ class QuizIpsActivity : AppCompatActivity() {
         return listOf(
             QuestionIps("Apa nama galaksi tempat kita berada?", listOf("Bimasakti", "Andromeda", "Orion", "Alpha Centauri"), "Bimasakti"),
             QuestionIps("Dimanakah letak Danau Toba?", listOf("Sumatra Utara", "Sumatra Barat", "Jawa Timur", "Bali"), "Sumatra Utara"),
-            QuestionIps("Apa warna bendera Indonesia?", listOf("Merah Putih", "Merah Biru", "Putih Hijau", "Kuning Merah"), "Merah Putih"),
-            QuestionIps("Apa nama gunung tertinggi di Indonesia?", listOf("Puncak Jaya", "Semeru", "Merapi", "Rinjani"), "Puncak Jaya"),
-            QuestionIps("Apa nama sungai terpanjang di Indonesia?", listOf("Kapuas", "Musi", "Mahakam", "Barito"), "Kapuas")
+            QuestionIps("Siapa presiden pertama Indonesia?", listOf("Soekarno", "Hatta", "Soeharto", "Habibie"), "Soekarno"),
+            QuestionIps("Apa nama ibu kota Provinsi Bali?", listOf("Denpasar", "Surabaya", "Medan", "Bandung"), "Denpasar"),
+            QuestionIps("Apa nama ibu kota Jawa Barat?", listOf("Bandung", "Surabaya", "Semarang", "Yogyakarta"), "Bandung"),
+            QuestionIps("Dimanakah letak Pulau Komodo?", listOf("Nusa Tenggara Timur", "Bali", "Papua", "Sumatra"), "Nusa Tenggara Timur"),
+            QuestionIps("Apa nama kota terbesar di Jawa Timur?", listOf("Surabaya", "Malang", "Sidoarjo", "Banyuwangi"), "Surabaya"),
+            QuestionIps("Siapa yang pertama kali mengemukakan teori heliosentris?", listOf("Copernicus", "Galileo", "Newton", "Kepler"), "Copernicus"),
+            QuestionIps("Apa nama gunung berapi aktif di Jawa Timur?", listOf("Semeru", "Bromo", "Rinjani", "Merapi"), "Semeru"),
+            QuestionIps("Apa nama hewan terbesar di dunia?", listOf("Paus Biru", "Gajah", "Jerapah", "Kuda Nil"), "Paus Biru")
         )
     }
 
@@ -105,7 +115,12 @@ class QuizIpsActivity : AppCompatActivity() {
             QuestionIps("Apa ibu kota Provinsi Bali?", listOf("Denpasar", "Surabaya", "Medan", "Bandung"), "Denpasar"),
             QuestionIps("Apa nama ibu kota Jawa Barat?", listOf("Bandung", "Surabaya", "Semarang", "Yogyakarta"), "Bandung"),
             QuestionIps("Dimanakah letak Pulau Komodo?", listOf("Nusa Tenggara Timur", "Bali", "Papua", "Sumatra"), "Nusa Tenggara Timur"),
-            QuestionIps("Apa nama kota terbesar di Jawa Timur?", listOf("Surabaya", "Malang", "Sidoarjo", "Banyuwangi"), "Surabaya")
+            QuestionIps("Apa nama kota terbesar di Jawa Timur?", listOf("Surabaya", "Malang", "Sidoarjo", "Banyuwangi"), "Surabaya"),
+            QuestionIps("Siapa yang pertama kali mengemukakan teori heliosentris?", listOf("Copernicus", "Galileo", "Newton", "Kepler"), "Copernicus"),
+            QuestionIps("Apa nama gunung berapi aktif di Jawa Timur?", listOf("Semeru", "Bromo", "Rinjani", "Merapi"), "Semeru"),
+            QuestionIps("Apa nama hewan terbesar di dunia?", listOf("Paus Biru", "Gajah", "Jerapah", "Kuda Nil"), "Paus Biru"),
+            QuestionIps("Siapa yang menulis novel 'Laskar Pelangi'?", listOf("Andrea Hirata", "Habiburrahman El Shirazy", "Pramoedya Ananta Toer", "Ayuwati"), "Andrea Hirata"),
+            QuestionIps("Siapa penemu telepon?", listOf("Alexander Graham Bell", "Thomas Edison", "Nikola Tesla", "Benjamin Franklin"), "Alexander Graham Bell")
         )
     }
 
