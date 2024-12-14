@@ -50,11 +50,18 @@ class GameMainActivity : AppCompatActivity() {
 
 
 
+
+
         // Menambahkan efek touch pada tombol IPS
         val btnIPS = findViewById<View>(R.id.btnIPS)
         btnIPS.setOnTouchListener { v, event ->
             handleHover(v, event)
-            true
+            return@setOnTouchListener false
+        }
+
+        btnIPS.setOnClickListener {
+            val intent = Intent(this, IpsLevelActivity::class.java)
+            startActivity(intent)
         }
 
 
@@ -69,6 +76,8 @@ class GameMainActivity : AppCompatActivity() {
             startActivity(intent)
         }
     }
+
+
 
     // Fungsi untuk menangani animasi saat tombol ditekan (hover effect)
     private fun handleHover(view: View, event: MotionEvent): Boolean {

@@ -66,42 +66,42 @@ class QuizActivity : AppCompatActivity() {
     // Pilih soal berdasarkan level
     private fun setupLevel(level: String?) {
         val questionsEasy = listOf(
-            Question("Apa ibu kota Indonesia?", listOf("Jakarta", "Surabaya", "Medan", "Bandung"), "Jakarta"),
-            Question("2 + 2 = ?", listOf("4", "3", "5", "6"), "4"),
-            Question("Apa warna langit saat cerah?", listOf("Biru", "Hijau", "Merah", "Kuning"), "Biru"),
-            Question("Berapa jumlah hari dalam seminggu?", listOf("7", "5", "10", "6"), "7"),
-            Question("Hewan apa yang memiliki belalai?", listOf("Gajah", "Harimau", "Kuda", "Rusa"), "Gajah"),
-            Question("Apa ibu kota Jepang?", listOf("Tokyo", "Osaka", "Kyoto", "Nagasaki"), "Tokyo"),
-            Question("7 x 7 = ?", listOf("49", "42", "36", "56"), "49"),
-            Question("Apa lambang kimia untuk air?", listOf("H2O", "O2", "CO2", "HO"), "H2O"),
-            Question("Apa hewan tercepat di darat?", listOf("Cheetah", "Kuda", "Kelinci", "Singa"), "Cheetah"),
-            Question("Berapa bulan dalam setahun?", listOf("12", "10", "11", "13"), "12")
+            Question("Apa warna daun pada tanaman?", listOf("Hijau", "Merah", "Biru", "Kuning"), "Hijau"),
+            Question("Hewan apa yang bisa terbang?", listOf("Burung", "Kucing", "Anjing", "Ikan"), "Burung"),
+            Question("Apa yang diperlukan tanaman untuk tumbuh?", listOf("Air", "Batu", "Logam", "Kaca"), "Air"),
+            Question("Berapa banyak jari yang dimiliki manusia?", listOf("10", "5", "12", "6"), "10"),
+            Question("Hewan apa yang hidup di air?", listOf("Ikan", "Ayam", "Sapi", "Kuda"), "Ikan"),
+            Question("Apa yang dihasilkan oleh tanaman untuk oksigen?", listOf("Daun", "Bunga", "Akar", "Batang"), "Daun"),
+            Question("Apa itu pelangi?", listOf("Cahaya yang terpecah menjadi warna-warna", "Bunga", "Hujan es", "Tanah basah"), "Cahaya yang terpecah menjadi warna-warna"),
+            Question("Berapa banyak planet di tata surya kita?", listOf("8", "5", "7", "9"), "8"),
+            Question("Apa yang dibutuhkan manusia untuk bernapas?", listOf("Oksigen", "Karbon dioksida", "Air", "Gula"), "Oksigen"),
+            Question("Hewan apa yang bisa melompat tinggi?", listOf("Kanguru", "Kuda", "Singa", "Kucing"), "Kanguru")
         )
 
         val questionsNormal = listOf(
-            Question("Siapa presiden pertama Indonesia?", listOf("Soekarno", "Hatta", "Soeharto", "Habibie"), "Soekarno"),
-            Question("7 x 8 = ?", listOf("56", "54", "48", "64"), "56"),
-            Question("Berapa jumlah planet dalam tata surya?", listOf("8", "7", "9", "10"), "8"),
-            Question("Apa nama galaksi tempat kita berada?", listOf("Bimasakti", "Andromeda", "Orion", "Alpha Centauri"), "Bimasakti"),
-            Question("Siapa yang menulis teori relativitas?", listOf("Albert Einstein", "Isaac Newton", "Marie Curie", "Nikola Tesla"), "Albert Einstein"),
-            Question("Apa warna bendera Indonesia?", listOf("Merah dan Putih", "Merah dan Biru", "Putih dan Hijau", "Kuning dan Merah"), "Merah dan Putih"),
-            Question("Hewan apa yang hidup di air dan darat?", listOf("Amfibi", "Reptil", "Mamalia", "Burung"), "Amfibi"),
-            Question("Siapa penemu bola lampu?", listOf("Thomas Edison", "Nikola Tesla", "James Watt", "Alexander Graham Bell"), "Thomas Edison"),
-            Question("Berapa jumlah sisi dalam segitiga?", listOf("3", "4", "5", "6"), "3"),
-            Question("Apa ibu kota Inggris?", listOf("London", "Paris", "Berlin", "Madrid"), "London")
+            Question("Hewan apa yang memiliki sayap?", listOf("Burung", "Gajah", "Kuda", "Pinguin"), "Burung"),
+            Question("Apa yang digunakan untuk melihat benda jauh?", listOf("Teleskop", "Kamera", "Lensa", "Mikroskop"), "Teleskop"),
+            Question("Apa yang mengalir di sungai?", listOf("Air", "Minyak", "Uap", "Gas"), "Air"),
+            Question("Tanaman yang menghasilkan buah apel, termasuk jenis apa?", listOf("Pohon buah", "Tanaman hias", "Tanaman obat", "Tanaman air"), "Pohon buah"),
+            Question("Apa yang terjadi jika air dipanaskan?", listOf("Air mendidih", "Air membeku", "Air berubah warna", "Air menguap"), "Air mendidih"),
+            Question("Planet mana yang dikenal sebagai planet merah?", listOf("Mars", "Jupiter", "Venus", "Merkurius"), "Mars"),
+            Question("Apa yang dimakan oleh sapi?", listOf("Rumput", "Daging", "Buah", "Ikan"), "Rumput"),
+            Question("Benda apa yang mengapung di air?", listOf("Kayu", "Batu", "Kaca", "Besi"), "Kayu"),
+            Question("Apa yang dilakukan oleh bunga?", listOf("Menghasilkan madu", "Menarik petir", "Menghasilkan oksigen", "Menyerap air"), "Menghasilkan madu"),
+            Question("Bagaimana tanaman mendapatkan air?", listOf("Melalui akar", "Melalui daun", "Melalui bunga", "Melalui batang"), "Melalui akar")
         )
 
         val questionsHard = listOf(
-            Question("Apa nama hukum aksi-reaksi?", listOf("Newton III", "Newton II", "Hukum Archimedes", "Hukum Ohm"), "Newton III"),
-            Question("Berapa hasil 15 x 15?", listOf("225", "250", "215", "200"), "225"),
-            Question("Siapa penemu radio?", listOf("Guglielmo Marconi", "Alexander Graham Bell", "James Watt", "Isaac Newton"), "Guglielmo Marconi"),
-            Question("Apa lambang kimia dari emas?", listOf("Au", "Ag", "Fe", "Cu"), "Au"),
-            Question("Apa nama gunung tertinggi di dunia?", listOf("Everest", "Kilimanjaro", "K2", "Elbrus"), "Everest"),
-            Question("Apa ibu kota Australia?", listOf("Canberra", "Sydney", "Melbourne", "Perth"), "Canberra"),
-            Question("Siapa yang menulis buku 'Origin of Species'?", listOf("Charles Darwin", "Gregor Mendel", "Isaac Newton", "Stephen Hawking"), "Charles Darwin"),
-            Question("Berapa jumlah rusuk dalam kubus?", listOf("12", "8", "6", "10"), "12"),
-            Question("Siapa penemu mesin cetak?", listOf("Johannes Gutenberg", "Alexander Graham Bell", "Isaac Newton", "Thomas Edison"), "Johannes Gutenberg"),
-            Question("Apa nama planet terbesar dalam tata surya?", listOf("Jupiter", "Saturnus", "Bumi", "Mars"), "Jupiter")
+            Question("Siapa penemu listrik?", listOf("Thomas Edison", "Nikola Tesla", "Albert Einstein", "Isaac Newton"), "Thomas Edison"),
+            Question("Apa nama bintang yang menjadi pusat tata surya?", listOf("Matahari", "Bulan", "Mars", "Jupiter"), "Matahari"),
+            Question("Di mana kita bisa menemukan kutub utara?", listOf("Di atas bumi", "Di bawah bumi", "Di tengah bumi", "Di sebelah timur bumi"), "Di atas bumi"),
+            Question("Apa yang terjadi saat air membeku?", listOf("Menjadi es", "Menjadi gas", "Menjadi awan", "Menjadi batu"), "Menjadi es"),
+            Question("Apa yang menyebabkan bumi berputar?", listOf("Gravitasi", "Angin", "Kekuatan manusia", "Panas matahari"), "Gravitasi"),
+            Question("Apakah benda yang paling keras di bumi?", listOf("Diamond", "Besi", "Emas", "Tembaga"), "Diamond"),
+            Question("Apa yang terjadi pada bumi jika terlalu banyak polusi?", listOf("Panas", "Hujan terus-menerus", "Banjir", "Tidak ada perubahan"), "Panas"),
+            Question("Apa yang digunakan manusia untuk menghitung waktu?", listOf("Jam", "Kompas", "Peta", "Buku"), "Jam"),
+            Question("Berapa jumlah gigi dewasa pada manusia?", listOf("32", "28", "30", "34"), "32"),
+            Question("Apa yang menyebabkan pelapukan batuan?", listOf("Air dan angin", "Batu keras", "Api", "Petir"), "Air dan angin")
         )
 
         questionList = when (level) {
