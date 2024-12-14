@@ -22,6 +22,9 @@
             android:name=".QuizActivity"
             android:exported="false" />
         <activity
+            android:name=".QuizIpsActivity"
+            android:exported="false" />
+        <activity
             android:name=".IpaLevelActivity"
             android:exported="false" />
         <activity
