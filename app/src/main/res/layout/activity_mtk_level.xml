@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/main"
+    android:gravity="center"
+    android:padding="16dp"
+    android:background="@drawable/bg_main"> <!-- Background biru muda -->
+
+    <!-- Judul Game -->
+    <TextView
+        android:id="@+id/tvTitleMtk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Game MTK"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-condensed"
+        android:textColor="#1A237E"
+        android:gravity="center"
+        android:layout_marginBottom="24dp" />
+
+    <!-- Subjudul -->
+    <TextView
+        android:id="@+id/tvSubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pilih Level Anda"
+        android:textSize="20sp"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="#0D47A1"
+        android:gravity="center"
+        android:layout_marginBottom="32dp" />
+
+    <!-- Tombol Level Mudah -->
+    <Button
+        android:id="@+id/btn_easy"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:padding="12dp"
+        android:backgroundTint="@android:color/holo_blue_light"
+        android:text="Mudah"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:elevation="8dp" />
+
+    <!-- Tombol Level Normal -->
+    <Button
+        android:id="@+id/btn_normal"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:padding="12dp"
+        android:backgroundTint="@android:color/holo_green_light"
+        android:text="Normal"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:elevation="8dp" />
+
+    <!-- Tombol Level Sulit -->
+    <Button
+        android:id="@+id/btn_hard"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:padding="12dp"
+        android:backgroundTint="@android:color/holo_red_light"
+        android:text="Sulit"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:elevation="8dp" />
+
+</LinearLayout>

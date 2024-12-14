@@ -1,37 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
-    android:background="@drawable/utama"
-    android:padding="16dp"
-    android:weightSum="1"
+    android:background="@drawable/sekolah"
     tools:context=".MainActivity">
 
-    <!-- Image in the center -->
+    <!-- Tulisan "Selamat Datang" di bagian atas -->
+    <TextView
+        android:id="@+id/tv_welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Selamat Datang"
+        android:textSize="24sp"
+        android:textColor="@android:color/white"
+        android:fontFamily="sans-serif-medium"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp"/>
+
+    <!-- Gambar di tengah -->
+
+    <!-- Tombol di bagian bawah -->
+
     <ImageView
         android:id="@+id/center_image"
         android:layout_width="308dp"
         android:layout_height="442dp"
-        android:layout_marginTop="92dp"
+        android:layout_marginTop="244dp"
         android:contentDescription="Center Image"
-        android:src="@drawable/siswa"
-        android:layout_gravity="center"/>
+        android:src="@drawable/sekolah2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_welcome" />
 
-    <!-- Button below the image -->
     <Button
         android:id="@+id/btn_start_game"
         android:layout_width="320dp"
         android:layout_height="50dp"
-        android:layout_marginTop="24dp"
         android:backgroundTint="@android:color/holo_green_light"
-        android:fontFamily="sans-serif-medium"
         android:text="MULAI BERMAIN"
         android:textColor="@android:color/white"
         android:textSize="18sp"
-        android:layout_gravity="center" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="32dp"/>
 
-</androidx.appcompat.widget.LinearLayoutCompat>
+</androidx.constraintlayout.widget.ConstraintLayout>

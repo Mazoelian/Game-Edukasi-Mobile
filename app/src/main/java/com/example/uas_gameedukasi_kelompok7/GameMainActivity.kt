@@ -56,6 +56,18 @@ class GameMainActivity : AppCompatActivity() {
             handleHover(v, event)
             true
         }
+
+
+        val btnMTK = findViewById<View>(R.id.btnMTK)
+        btnMTK.setOnTouchListener { v, event ->
+            handleHover(v, event)
+            return@setOnTouchListener false
+        }
+
+        btnMTK.setOnClickListener {
+            val intent = Intent(this, MtkLevelActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     // Fungsi untuk menangani animasi saat tombol ditekan (hover effect)

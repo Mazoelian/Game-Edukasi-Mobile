@@ -19,7 +19,7 @@
         android:fontFamily="sans-serif-condensed"
         android:textColor="#1A237E"
         android:gravity="center"
-     android:layout_marginBottom="40dp" />
+     android:layout_marginBottom="25dp" />
 
     <!-- Subjudul -->
     <TextView
@@ -84,6 +84,34 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Ilmu Pengetahuan Sosial"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- Tombol MTK -->
+    <LinearLayout
+        android:id="@+id/btnMTK"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_margin="8dp"
+        android:padding="16dp"
+        android:elevation="12dp"
+        android:background="@drawable/button_3d_blue"> <!-- Background oranye -->
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/times"
+            android:contentDescription="IPS Icon"
+            android:layout_marginEnd="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Matematika"
             android:textColor="#FFFFFF"
             android:textSize="18sp"
             android:textStyle="bold" />
